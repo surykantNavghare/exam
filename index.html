@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exampractice</title>
+    <link rel="stylesheet" href="exampage.css">
+    <Script type="text/javaScript">
+        function nameValidation(str)
+	{
+       let pattern= /^[a-zA-Z\s]+$/g;
+       let result=pattern.test(str);
+       if(result)
+		{
+			document.getElementById("a").innerHTML="";
+		}
+		else{
+			document.getElementById("a").innerHTML="invalid name";
+			document.getElementById("a").style.color="red";
+			}	
+	}
+	function emailValidation(str)
+	{
+		let pattern=/^[a-z]{1}[a-z0-9._-]+@[a-z]+\.[a-z]{2,3}$/g;
+ 		let result=str.match(pattern);
+ 		if(result)
+ 		{ 
+			document.getElementById("q").innerHTML="";
+ 		}
+		else{
+			 document.getElementById("q").innerHTML="invalid email address";
+			document.getElementById("q").innerHTML.style.color="red";
+			}
+	}
+	function contactValidation(str)
+	{
+		 let pattern= /^[6-9]{1}[0-9]{9}$/;
+         let result=pattern.test(str);
+         if(result)
+         {
+           document.getElementById("r").innerHTML="";
+          }
+         else{
+         document.getElementById("r").innerHTML="invalid contact";
+         document.getElementById("r").style.color="red";
+         }	
+	}
+	
+    
+    </Script>
+
+</head>
+<body>
+    <section class="header">
+    <nav>
+        <a href="index.html"><img src="image/exampage.png"></a>
+        <div class="nav-link" id="nav-link">
+            
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">SERVISE </a></li>
+                <li><a href="">PROJECT</a></li>
+                <li><a href="">CONTACT US</a></li>
+                <li><a href="">PAGE</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+    <div class="text-box">
+        <h1>CONTACT US </h1>
+        <P> Mauris eget labortis consectetur nibh ex quam mum cras</P>
+        
+    </div>
+</section>
+<div class="from">
+    <h1> HAVE A QUESTION OR FEEDBACK?<P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sapiente odit</P></h1>
+    
+        <div id="menu">
+            <input type="text" name="name" value="" placeholder="Name" onkeyup="nameValidation(this.value)">
+	   <p id="a"></p>
+	   <input type="email" name="email" value="" placeholder="Email" onkeyup="emailValidation(this.value)">
+       <p id="q"></p>
+       <input type="text" name="contact" value="" placeholder="Contact" onkeyup="contactValidation(this.value)">
+       <p id="r"></p>
+      
+       <input type="submit" name="s" value="Submit" id="submit">
+        </div>
+</div>
+
+   
+    <div class="text">
+        <h1>We're here to help</h1>
+        <p>Lorem, ipsum dolor sit amet conse</p>
+    </div>
+      <div class="part">
+     <h1>FOLLOW OUR OFFICAL SOCIAL NETWORK</h1>
+      </div>
+    
+</body>
+</html>
